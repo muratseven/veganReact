@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/veganReact/static/css/main.7615fd24.css",
+    "main.js": "/veganReact/static/js/main.5a9d353b.js",
+    "static/js/787.ae3b2d8d.chunk.js": "/veganReact/static/js/787.ae3b2d8d.chunk.js",
+    "index.html": "/veganReact/index.html",
+    "main.7615fd24.css.map": "/veganReact/static/css/main.7615fd24.css.map",
+    "main.5a9d353b.js.map": "/veganReact/static/js/main.5a9d353b.js.map",
+    "787.ae3b2d8d.chunk.js.map": "/veganReact/static/js/787.ae3b2d8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7615fd24.css",
+    "static/js/main.5a9d353b.js"
+  ]
+}
