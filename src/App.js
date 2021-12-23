@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import CategoryAdd from "./components/CategoryAdd";
+import RecipesAdd from "./components/RecipesAdd";
 
 function App() {
+  const [value, setValue] = useState();
+
+  function renderSwitch(param) {
+    switch (param) {
+      case "Category Add":
+        return <CategoryAdd />;
+      case "Recipes Add":
+        return <RecipesAdd />;
+      case "Ingredient Add":
+        return <CategoryAdd />;
+      default:
+        return <CategoryAdd />;
+    }
+  }
+
+  function handleChange(event) {
+    renderSwitch(event.target.value);
+    setValue(event.target.value);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <select value={value} onChange={handleChange}>
+        <option selected value="Category Add">Category Add</option>
+        <option value="Recipes Add">Recipes Add</option>
+        <option value="Ingredient Add">Ingredient Add</option>
+      </select>
+      {renderSwitch(value)}
+    </Router>
   );
 }
-
 export default App;
